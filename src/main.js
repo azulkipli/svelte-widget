@@ -1,9 +1,7 @@
+// @ts-nocheck
 import 'uno.css'
 import 'virtual:unocss-devtools'
 import App from './App.svelte'
 
-const app = new App({
-  target: document.getElementById('app'),
-})
-
-export default app
+import component from "svelte-tag"
+new component({component:App,tagname:"svelte-widget",attributes:["name"]})
