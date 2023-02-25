@@ -6,7 +6,7 @@
 	export let display;
   export let setting;
 
-  const text = 'widget'
+  const text = 'Product title'
 
   const pkg = {
 		name: 'svelte',
@@ -19,11 +19,14 @@
 <main>
   <h1>Vite + Svelte</h1>
 
+  {#if display === 'counter'}
   <Counter />
+  {/if}
 
-  <Product {text} {display} />
+  {#if display === 'thumbnail'}
+  <Product {text} />
+  {/if}
 
-  <!-- <Info name={pkg.name} version={pkg.version} speed={pkg.speed} website={pkg.website}/> -->
   <Info {...pkg} {...setting}/>
 
 </main>
