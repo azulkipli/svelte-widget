@@ -28,7 +28,7 @@ export default defineConfig(({ mode }) => ({
     UnoCSS({
       presets: [presetAttributify(),presetUno()],
       shortcuts: [
-        { "cool-blue": "bg-blue-500 text-white" },
+        { "cool-blue": "bg-blue-700 text-white" },
         { "cool-green": "bg-green-500 text-black" },
       ],
     }),

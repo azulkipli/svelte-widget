@@ -1,10 +1,12 @@
 <script>
   import Counter from "./lib/Counter.svelte";
-  import Info from "./lib/Info.svelte";
+  // import Info from "./lib/Info.svelte";
   import Product from "./lib/Product.svelte";
+  import { onMount } from 'svelte';
+
   // props
 	export let display;
-  export let setting;
+  // export let setting;
 
   const text = 'Product title'
 
@@ -14,10 +16,21 @@
 		speed: 'blazing',
 		website: 'https://svelte.dev'
 	};
+
+
+	onMount(() => {
+		const interval = setInterval(() => {
+			console.log('beep');
+		}, 1000);
+
+		return () => clearInterval(interval);
+	});
+
 </script>
 
-<main>
-  <h1>Vite + Svelte</h1>
+<section class="border-dashed border-amber border-1 p-8 mb-8">
+
+  <h1>SvelteWidget: {display}</h1>
 
   {#if display === 'counter'}
   <Counter />
@@ -27,6 +40,6 @@
   <Product {text} />
   {/if}
 
-  <Info {...pkg} {...setting}/>
+  <!-- <Info {...pkg} {...setting}/> -->
 
-</main>
+</section>
