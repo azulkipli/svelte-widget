@@ -5,9 +5,7 @@
 <div
   class="group relative block border-solid border-gray-200 border-1 overflow-hidden"
 >
-  <button
-    class="absolute right-4 top-4 z-10 border-0 rounded-full bg-white px-1.5 pb-0.5 pt-1.5 text-gray-500 transition hover:bg-blue-500 hover:text-white"
-  >
+  <button aria-label="btn-favorite" class="btn-favorite">
     <svg
       xmlns="http://www.w3.org/2000/svg"
       fill="none"
@@ -31,21 +29,13 @@
   />
 
   <div class="relative border border-gray-100 bg-white p-6">
-    <span
-      class="product-tag"
-    >
-      New
-    </span>
+    <span class="product-tag"> New </span>
 
-    <h3 class="mt-4 text-lg font-medium text-gray-900">{text}</h3>
+    <div class="mt-4 text-lg font-medium text-gray-900">{text}</div>
 
     <p class="mt-1.5 text-sm text-gray-700 font-bold">$14.99</p>
 
-    <button
-      id="add-to-cart"
-      aria-label="add-to-cart"
-      class="btn-flik"
-    >
+    <button id="add-to-cart" aria-label="add-to-cart" class="btn-flik">
       Add to Cart
     </button>
   </div>
