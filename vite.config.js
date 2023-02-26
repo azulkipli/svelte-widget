@@ -28,8 +28,8 @@ export default defineConfig(({ mode }) => ({
     UnoCSS({
       presets: [presetAttributify(),presetUno()],
       shortcuts: [
-        { "flik-primary": "bg-#1f1f54 text-white" },
-        { "btn-flik": "block w-full rounded flik-primary p-4 text-15px font-medium border-0 transition hover:bg-blue-500" },
+        { "flik-primary": "bg-#1f1f54" },
+        { "btn-flik": "block w-full rounded flik-primary text-white p-4 text-15px font-medium border-0 transition hover:bg-blue-500" },
         { "cool-blue": "bg-blue-700 text-white" },
         { "product-tag": "whitespace-nowrap bg-yellow-400 px-3 py-1.5 text-12px font-normal rounded-full" },
       ],
