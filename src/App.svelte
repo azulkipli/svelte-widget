@@ -45,6 +45,7 @@
 </section>
 
 <style>
+  button { touch-action: manipulation; }
   .swidget {
     font-family: 'Noto Sans', san-serif, system-ui;
   }
