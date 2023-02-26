@@ -28,7 +28,7 @@
 
 </script>
 
-<section class="border-dashed border-amber border-1 p-8 mb-8">
+<section class="border-dashed border-amber border-1 p-8 mb-8 swidget">
 
   <h1>SvelteWidget: {display}</h1>
 
@@ -43,3 +43,9 @@
   <!-- <Info {...pkg} {...setting}/> -->
 
 </section>
+
+<style>
+  .swidget {
+    font-family: 'Noto Sans', san-serif, system-ui;
+  }
+</style>

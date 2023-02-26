@@ -28,6 +28,7 @@ export default defineConfig(({ mode }) => ({
     UnoCSS({
       presets: [presetAttributify(),presetUno()],
       shortcuts: [
+        { "flik-primary": "bg-#1f1f54 text-white" },
         { "cool-blue": "bg-blue-700 text-white" },
         { "cool-green": "bg-green-500 text-black" },
       ],

@@ -42,7 +42,7 @@
   
       <form class="mt-4">
         <button
-          class="block w-full rounded bg-blue-400 p-4 text-sm font-medium border-0 transition hover:bg-blue-500"
+          class="block w-full rounded flik-primary p-4 text-sm font-medium border-0 transition hover:bg-blue-500"
         >
           Add to Cart
         </button>
