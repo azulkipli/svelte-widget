@@ -1,6 +1,7 @@
 lockfileVersion: 5.4
 
 specifiers:
+  '@iconify/svelte': ^3.1.0
   '@sveltejs/vite-plugin-svelte': ^2.0.2
   '@unocss/preset-wind': ^0.50.1
   '@unocss/vite': ^0.50.1
@@ -13,6 +14,7 @@ dependencies:
   svelte-tag: 1.0.1
 
 devDependencies:
+  '@iconify/svelte': 3.1.0_svelte@3.55.1
   '@sveltejs/vite-plugin-svelte': 2.0.3_svelte@3.55.1+vite@4.1.4
   '@unocss/preset-wind': 0.50.1
   '@unocss/vite': 0.50.1_vite@4.1.4
@@ -242,6 +244,15 @@ packages:
     requiresBuild: true
     dev: true
     optional: true
+
+  /@iconify/svelte/3.1.0_svelte@3.55.1:
+    resolution: {integrity: sha512-G1w1dcO7eiD+JmQJNwNW4qnAn86oQxKLe1P/iAPjJ0qYYuF7Pb60TPrlcj4+2gu4SXe3a0Jrv++8YmceG+gX/g==}
+    peerDependencies:
+      svelte: '>=3'
+    dependencies:
+      '@iconify/types': 2.0.0
+      svelte: 3.55.1
+    dev: true
 
   /@iconify/types/2.0.0:
     resolution: {integrity: sha512-+wluvCrRhXrhyOmRDJ3q8mux9JkKy5SJ/v8ol2tu4FVjyYvtEzkc/3pK15ET6RKg4b4w4BmTk1+gsCUhf21Ykg==}

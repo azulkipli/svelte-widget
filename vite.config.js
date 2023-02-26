@@ -29,8 +29,9 @@ export default defineConfig(({ mode }) => ({
       presets: [presetAttributify(),presetUno()],
       shortcuts: [
         { "flik-primary": "bg-#1f1f54 text-white" },
+        { "btn-flik": "block w-full rounded flik-primary p-4 text-15px font-medium border-0 transition hover:bg-blue-500" },
         { "cool-blue": "bg-blue-700 text-white" },
-        { "cool-green": "bg-green-500 text-black" },
+        { "product-tag": "whitespace-nowrap bg-yellow-400 px-3 py-1.5 text-12px font-normal rounded-full" },
       ],
     }),
   ],
