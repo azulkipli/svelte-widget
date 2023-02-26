@@ -28,7 +28,7 @@
 
 </script>
 
-<section class="border-dashed border-amber border-1 p-8 mb-8 swidget">
+<section class="border-dashed border-amber border-1 p-4 mb-8 swidget">
 
   <h1>
     <Icon icon="mdi-light:home" />
