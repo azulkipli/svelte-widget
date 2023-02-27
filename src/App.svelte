@@ -44,9 +44,7 @@
 
   {#if display === "thumbnail"}
    <div class="wrapper">
-    <Lazy>
-      <InputPhone />
-    </Lazy>
+    <InputPhone />
     <Product {text} />
    </div>
   {/if}
