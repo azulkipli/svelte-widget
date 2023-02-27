@@ -3,8 +3,9 @@
   import Info from "./components/Info.svelte";
   import Product from "./components/Product.svelte";
   import InputPhone from "./components/InputPhone.svelte";
-  import { onMount } from "svelte";
+  // import { onMount } from "svelte";
   import Icon from "@iconify/svelte";
+  import Lazy from 'svelte-lazy';
   // props
   export let display, text;
   // export let setting;
@@ -27,7 +28,9 @@
 
 <section class="border-dashed border-amber border-1 p-4 mb-8 swidget">
   <h1>
-    <Icon icon="mdi-light:home" />
+    <Lazy>
+      <Icon icon="mdi-light:home" />
+    </Lazy>
     SvelteWidget: {display}
   </h1>
 
@@ -41,7 +44,9 @@
 
   {#if display === "thumbnail"}
    <div class="wrapper">
-    <InputPhone />
+    <Lazy>
+      <InputPhone />
+    </Lazy>
     <Product {text} />
    </div>
   {/if}
