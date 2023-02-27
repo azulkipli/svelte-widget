@@ -27,11 +27,13 @@
 </script>
 
 <section class="border-dashed border-amber border-1 p-4 mb-8 swidget">
-  <h1>
-    <Lazy>
-      <Icon icon="mdi-light:home" />
+  <h1 class="mt-0 mb-3 p-0 flex justify-start">
+    <Lazy class="inline-flex items-center">
+      <Icon icon="mdi-light:home" class="mt-6px" />
     </Lazy>
+    <span>
     SvelteWidget: {display}
+    </span>
   </h1>
 
   {#if display === "counter"}
