@@ -31,8 +31,8 @@
 
   <Lazy height={256}>
     <img
-      src="https://images.unsplash.com/photo-1599481238640-4c1288750d7a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2664&q=80"
-      alt=""
+      src="https://burst.shopifycdn.com/photos/blue-phone-case-and-eyeglasses-on-wooden-table.jpg?width=256&format=pjpg&exif=1&iptc=1"
+      alt="product"
       class="h-64 w-full object-cover transition duration-500 group-hover:scale-105 sm:h-72"
     />
   </Lazy>
