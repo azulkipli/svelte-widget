@@ -1,5 +1,10 @@
 <script>
   export let text;
+
+  function addProduct(params) {
+    console.log('addProduct => params : ', params)
+    
+  }
 </script>
 
 <div
@@ -35,7 +40,7 @@
 
     <p class="mt-1.5 text-sm text-gray-700 font-bold">$14.99</p>
 
-    <button id="add-to-cart" aria-label="add-to-cart" class="btn-flik">
+    <button id="add-to-cart" aria-label="add-to-cart" class="btn-flik" on:click={()=> addProduct(text)}>
       Add to Cart
     </button>
   </div>

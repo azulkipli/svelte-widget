@@ -1,29 +1,28 @@
 <script>
-  import Counter from "./lib/Counter.svelte";
-  // import Info from "./lib/Info.svelte";
-  import Product from "./lib/Product.svelte";
+  import Counter from "./components/Counter.svelte";
+  import Info from "./components/Info.svelte";
+  import Product from "./components/Product.svelte";
+  import InputPhone from "./components/InputPhone.svelte";
   import { onMount } from "svelte";
   import Icon from "@iconify/svelte";
   // props
-  export let display;
+  export let display, text;
   // export let setting;
 
-  const text = "Product title";
-
-  const pkg = {
+  let setting = {
     name: "svelte",
     version: 3,
     speed: "blazing",
     website: "https://svelte.dev",
   };
 
-  onMount(() => {
-    const interval = setInterval(() => {
-      console.log("beep");
-    }, 1000);
+  // onMount(() => {
+  //   const interval = setInterval(() => {
+  //     console.log("beep");
+  //   }, 1000);
 
-    return () => clearInterval(interval);
-  });
+  //   return () => clearInterval(interval);
+  // });
 </script>
 
 <section class="border-dashed border-amber border-1 p-4 mb-8 swidget">
@@ -36,11 +35,17 @@
     <Counter />
   {/if}
 
-  {#if display === "thumbnail"}
-    <Product {text} />
+  {#if display === "info"}
+  <Info {...setting} />
   {/if}
 
-  <!-- <Info {...pkg} {...setting}/> -->
+  {#if display === "thumbnail"}
+   <div class="wrapper">
+    <InputPhone />
+    <Product {text} />
+   </div>
+  {/if}
+
 </section>
 
 <style>
