@@ -3,11 +3,12 @@ import { svelte } from "@sveltejs/vite-plugin-svelte";
 import UnoCSS from "unocss/vite";
 // import presetWind from '@unocss/preset-wind'
 import { presetAttributify, presetUno } from "unocss";
+import presetWebFonts from '@unocss/preset-web-fonts'
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
   build: {
-    sourcemap: true,
+    // sourcemap: true,
     rollupOptions: {
       // https://rollupjs.org/configuration-options/
       output: {
@@ -25,7 +26,16 @@ export default defineConfig(({ mode }) => ({
   plugins: [
     svelte(),
     UnoCSS({
-      presets: [presetAttributify(), presetUno()],
+      presets: [
+        presetUno(),
+        presetWebFonts({
+          provider: 'google', // default provider
+          fonts: {
+            // these will extend the default theme
+            sans: 'Noto Sans'
+          },
+        }),
+      ],
       shortcuts: [
         { "flik-primary": "bg-#1f1f54" },
         {
