@@ -15,6 +15,7 @@ export default defineConfig(({ mode }) => ({
           mode !== "production"
             ? `svelte-widget-${mode}.js`
             : "svelte-widget.js",
+        assetFileNames: "svelte-widget.[ext]",
       },
     },
   },
