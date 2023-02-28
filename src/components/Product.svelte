@@ -2,7 +2,7 @@
   import Lazy from "svelte-lazy";
   export let text;
   // const img1 = "https://www.gstatic.com/webp/gallery/4.webp";
-  const img1 = "../assets/img/256.webp";
+  import imgUrl from "../assets/img/256.webp"
 
   // const numberOfImages = 5;
   // This will generate an array of urls such as /images/1.png, /images/2.png, up to numberOfImages
@@ -14,7 +14,7 @@
 </script>
 
 <svelte:head>
-  <link rel="preload" as="image" href={img1} />
+  <link rel="preload" as="image" href={imgUrl} />
 </svelte:head>
 
 <div
@@ -37,9 +37,9 @@
     </svg>
   </button>
 
-  <Lazy heigh={256}>
+  <Lazy height={256}>
     <img
-      src={img1}
+      src={imgUrl}
       alt="product"
       class="h-64 w-full object-cover transition duration-500 group-hover:scale-105 sm:h-72"
     />
@@ -52,15 +52,13 @@
 
     <p class="mt-1.5 text-sm text-gray-700 font-bold">$14.99</p>
 
-    <Lazy>
-      <button
-        id="add-to-cart"
-        aria-label="add-to-cart"
-        class="btn-flik"
-        on:click={() => addProduct(text)}
-      >
-        Add to Cart
-      </button>
-    </Lazy>
+    <button
+      id="add-to-cart"
+      aria-label="add-to-cart"
+      class="btn-flik"
+      on:click={() => addProduct(text)}
+    >
+      Add to Cart
+    </button>
   </div>
 </div>
