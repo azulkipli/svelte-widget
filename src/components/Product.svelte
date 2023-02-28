@@ -1,7 +1,7 @@
 <script>
   import Lazy from "svelte-lazy";
   export let text;
-  const img1 = "https://burst.shopifycdn.com/photos/blue-phone-case-and-eyeglasses-on-wooden-table.jpg?width=256&format=pjpg&exif=1&iptc=1"
+  const img1 = "https://www.gstatic.com/webp/gallery/4.webp"
 
   // const numberOfImages = 5;
   // This will generate an array of urls such as /images/1.png, /images/2.png, up to numberOfImages
