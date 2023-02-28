@@ -4,6 +4,7 @@ import UnoCSS from "unocss/vite";
 // import presetWind from '@unocss/preset-wind'
 import { presetUno } from "unocss";
 import presetWebFonts from '@unocss/preset-web-fonts'
+import { presetForms } from '@julr/unocss-preset-forms'
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
@@ -28,6 +29,7 @@ export default defineConfig(({ mode }) => ({
     UnoCSS({
       presets: [
         presetUno(),
+        presetForms(),
         presetWebFonts({
           provider: 'google', // default provider
           fonts: {

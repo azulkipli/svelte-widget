@@ -3,6 +3,7 @@
   import Info from "./components/Info.svelte";
   import Product from "./components/Product.svelte";
   import InputPhone from "./components/InputPhone.svelte";
+  import InputPhoneFlag from "./components/InputPhoneFlag.svelte";
   // import { onMount } from "svelte";
   import Icon from "@iconify/svelte";
   import Lazy from 'svelte-lazy';
@@ -45,6 +46,7 @@
   {#if display === "thumbnail"}
    <div class="wrapper">
     <InputPhone />
+    <InputPhoneFlag />
     <Product {text} />
    </div>
   {/if}
