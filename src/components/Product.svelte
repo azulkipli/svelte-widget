@@ -1,7 +1,7 @@
 <script>
   import Lazy from "svelte-lazy";
   export let text;
-  const img1 = "https://www.gstatic.com/webp/gallery/4.webp"
+  const img1 = "https://www.gstatic.com/webp/gallery/4.webp";
 
   // const numberOfImages = 5;
   // This will generate an array of urls such as /images/1.png, /images/2.png, up to numberOfImages
@@ -36,7 +36,7 @@
     </svg>
   </button>
 
-  <Lazy height={256}>
+  <Lazy>
     <img
       src={img1}
       alt="product"
@@ -51,13 +51,15 @@
 
     <p class="mt-1.5 text-sm text-gray-700 font-bold">$14.99</p>
 
-    <button
-      id="add-to-cart"
-      aria-label="add-to-cart"
-      class="btn-flik"
-      on:click={() => addProduct(text)}
-    >
-      Add to Cart
-    </button>
+    <Lazy>
+      <button
+        id="add-to-cart"
+        aria-label="add-to-cart"
+        class="btn-flik"
+        on:click={() => addProduct(text)}
+      >
+        Add to Cart
+      </button>
+    </Lazy>
   </div>
 </div>

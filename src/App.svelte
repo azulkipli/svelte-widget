@@ -28,9 +28,9 @@
 
 <section class="border-dashed border-amber border-1 p-4 mb-8 swidget">
   <h1 class="mt-0 mb-3 p-0 flex justify-start">
-    <Icon icon="mdi-light:home" class="mt-6px" />
+    <Icon icon="mdi-light:home" class="mt-6px mr-1" />
     <span>
-    SvelteWidget: {display}
+    {display}
     </span>
   </h1>
 
@@ -42,7 +42,7 @@
   <Info {...setting} />
   {/if}
 
-  {#if display === "thumbnail"}
+  {#if display === "product-thumbnail"}
    <div class="wrapper">
     <Product {text} />
    </div>
