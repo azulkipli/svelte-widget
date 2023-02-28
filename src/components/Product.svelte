@@ -1,13 +1,20 @@
 <script>
-  import Lazy from 'svelte-lazy';
-
+  import Lazy from "svelte-lazy";
   export let text;
+  const img1 = "https://burst.shopifycdn.com/photos/blue-phone-case-and-eyeglasses-on-wooden-table.jpg?width=256&format=pjpg&exif=1&iptc=1"
+
+  // const numberOfImages = 5;
+  // This will generate an array of urls such as /images/1.png, /images/2.png, up to numberOfImages
+  // $: preloadImageUrls = [...Array(maxImages).keys()].map((key) => `/images/${key+1}.png`);
 
   function addProduct(params) {
-    console.log('addProduct => params : ', params)
-    
+    console.log("addProduct => params : ", params);
   }
 </script>
+
+<svelte:head>
+  <link rel="preload" as="image" href={img1} />
+</svelte:head>
 
 <div
   class="group relative block border-solid border-gray-200 border-1 overflow-hidden"
@@ -31,7 +38,7 @@
 
   <Lazy height={256}>
     <img
-      src="https://burst.shopifycdn.com/photos/blue-phone-case-and-eyeglasses-on-wooden-table.jpg?width=256&format=pjpg&exif=1&iptc=1"
+      src={img1}
       alt="product"
       class="h-64 w-full object-cover transition duration-500 group-hover:scale-105 sm:h-72"
     />
@@ -44,7 +51,12 @@
 
     <p class="mt-1.5 text-sm text-gray-700 font-bold">$14.99</p>
 
-    <button id="add-to-cart" aria-label="add-to-cart" class="btn-flik" on:click={()=> addProduct(text)}>
+    <button
+      id="add-to-cart"
+      aria-label="add-to-cart"
+      class="btn-flik"
+      on:click={() => addProduct(text)}
+    >
       Add to Cart
     </button>
   </div>
