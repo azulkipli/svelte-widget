@@ -36,7 +36,7 @@
     </svg>
   </button>
 
-  <Lazy>
+  <Lazy heigh={256}>
     <img
       src={img1}
       alt="product"
